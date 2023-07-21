@@ -1,0 +1,41 @@
+<div class="container">
+    <h1 class="heading">Seller Autentication</h1>
+    <div *ngIf="!showLogInForm" class="sign-up-form">
+        <form class="auth-form" #sellerSignUpForm="ngForm" (ngSubmit)="signUp(sellerSignUpForm.value)">
+            <mat-form-field class="auth-full-width">
+                <input matInput placeholder="Enter an Email" ngModel name="email" type="email">
+            </mat-form-field>
+
+            <mat-form-field class="auth-full-width">
+                <input matInput placeholder="Enter a Name" ngModel name="name" type="text">
+            </mat-form-field>
+
+            <mat-form-field class="auth-full-width">
+                <input matInput placeholder="Enter a Password" ngModel name="password" type="password">
+            </mat-form-field>
+
+            <button mat-raised-button color="primary" type="submit" style="width: 100%;">Sign Up</button>
+
+            <a class="auth-link" (click)="openLogInForm()">Already have an account ? Click for Log In</a>
+        </form>
+    </div> 
+    
+    <div *ngIf="showLogInForm" class="sign-up-form">
+        <form class="auth-form" #sellerLogInForm="ngForm" (ngSubmit)="logIn(sellerLogInForm.value)">
+        
+            <p class="auth-error">{{logInError}}</p>
+
+            <mat-form-field class="auth-full-width">
+                <input matInput placeholder="Enter an Email" ngModel name="email" type="email">
+            </mat-form-field>
+
+            <mat-form-field class="auth-full-width">
+                <input matInput placeholder="Enter a Password" ngModel name="password" type="password">
+            </mat-form-field>
+
+            <button mat-raised-button color="primary" type="submit" style="width: 100%;">Log In</button>
+
+            <a class="auth-link" (click)="openLogInForm()">Don't have an account ? Click for Sign Up</a>
+        </form>
+    </div> 
+</div>

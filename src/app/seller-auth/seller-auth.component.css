@@ -1,0 +1,45 @@
+.heading {
+    color: blueviolet;
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 1.5rem;
+    border: 1px;
+}
+
+.sign-up-form {
+    width: 100%;
+    height: 50vh;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.auth-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 2em;
+  }
+  
+.auth-full-width {
+    width: 100%;
+  }
+
+  .auth-link{
+    display: inline-block;
+    color: blueviolet;
+    font-size: 14px;
+    margin-top: 20px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.auth-error {
+
+  color: red;
+  
+}
+

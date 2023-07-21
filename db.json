@@ -1,0 +1,40 @@
+{
+  "seller": [
+    {
+      "name": "user1",
+      "email": "user1@steller-shop.com",
+      "password": "abc@123",
+      "id": 1
+    },
+    {
+      "name": "user2",
+      "email": "user2@steller-shop.com",
+      "password": "abc@123",
+      "id": 2
+    },
+    {
+      "email": "user3@steller-shop.com",
+      "name": "user3",
+      "password": "abc@123",
+      "id": 3
+    },
+    {
+      "email": "user4@steller-shop.com",
+      "name": "user4",
+      "password": "abc@123",
+      "id": 4
+    },
+    {
+      "email": "user5@steller-shop.com",
+      "name": "user5",
+      "password": "abc@123",
+      "id": 5
+    },
+    {
+      "email": "user5@steller-shop.com",
+      "name": "user5",
+      "password": "abc@123",
+      "id": 6
+    }
+  ]
+}
