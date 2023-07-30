@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 export class HeaderComponent {
 
   menuType:string = 'default'
+  sellerName:string = ''
 
   constructor(private router:Router){}
 
@@ -24,6 +25,10 @@ export class HeaderComponent {
         if(localStorage.getItem('seller') && val.url.includes('seller'))
         {
           this.menuType = 'seller'
+
+          let sellerStore=localStorage.getItem('seller');
+          let sellerData =sellerStore && JSON.parse(sellerStore)[0];
+          this.sellerName=sellerData.name;
         }
         else
         {
@@ -32,5 +37,11 @@ export class HeaderComponent {
       }
 
     })
+  }
+
+  logout():void
+  {
+    localStorage.removeItem('seller')
+    this.router.navigate(['/'])
   }
 }

@@ -1,0 +1,33 @@
+<h1 class="heading">Update Product</h1>
+<p class="messge-successful" style="text-align: center;">{{updateMessage}}</p>
+<div class="container" style="display: flex; justify-content: center;">
+    <form class="auth-form" #updateProductForm="ngForm" (ngSubmit)="updateProduct(updateProductForm.value)">
+        <mat-form-field class="auth-full-width">
+            <input matInput placeholder="Enter a Name" ngModel="{{productData?.name}}" name="name" type="text">
+        </mat-form-field>
+
+        <mat-form-field class="auth-full-width">
+            <input matInput placeholder="Enter a price" ngModel="{{productData?.price}}" name="price" type="text">
+        </mat-form-field>
+
+        <mat-form-field class="auth-full-width">
+            <input matInput placeholder="Enter a color" ngModel="{{productData?.color}}" name="color" type="text">
+        </mat-form-field>
+
+        <mat-form-field class="auth-full-width">
+            <input matInput placeholder="Enter a category" ngModel="{{productData?.category}}" name="category" type="text">
+        </mat-form-field>
+
+        <mat-form-field class="auth-full-width">
+            <input matInput placeholder="Enter an image url" ngModel="{{productData?.image}}" name="image" type="text">
+        </mat-form-field>
+
+        <mat-form-field class="auth-full-width">
+            <textarea matInput placeholder="Enter a description" ngModel="{{productData?.description}}" name="price" type="text"></textarea>
+        </mat-form-field>
+
+
+        <button mat-raised-button color="primary" type="submit" style="width: 100%;">Update Product</button>
+
+    </form>
+</div>

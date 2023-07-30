@@ -40,4 +40,10 @@
 .auth-error {
 
   color: red;
+  
+}
+
+.messge-successful {
+
+    color: green;
 }

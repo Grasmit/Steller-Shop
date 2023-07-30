@@ -1,0 +1,33 @@
+<h1 class="heading">Add New Product</h1>
+<p class="messge-successful" style="text-align: center;">{{addProductMessage}}</p>
+<div class="container" style="display: flex; justify-content: center;">
+    <form class="auth-form" #addProductForm="ngForm" (ngSubmit)="addProduct(addProductForm.value)">
+        <mat-form-field class="auth-full-width">
+            <input matInput placeholder="Enter a Name" ngModel name="name" type="text">
+        </mat-form-field>
+
+        <mat-form-field class="auth-full-width">
+            <input matInput placeholder="Enter a price" ngModel name="price" type="text">
+        </mat-form-field>
+
+        <mat-form-field class="auth-full-width">
+            <input matInput placeholder="Enter a color" ngModel name="color" type="text">
+        </mat-form-field>
+
+        <mat-form-field class="auth-full-width">
+            <input matInput placeholder="Enter a category" ngModel name="category" type="text">
+        </mat-form-field>
+
+        <mat-form-field class="auth-full-width">
+            <input matInput placeholder="Enter an image url" ngModel name="image" type="text">
+        </mat-form-field>
+
+        <mat-form-field class="auth-full-width">
+            <textarea matInput placeholder="Enter a description" ngModel name="price" type="text"></textarea>
+        </mat-form-field>
+
+
+        <button mat-raised-button color="primary" type="submit" style="width: 100%;">Sign Up</button>
+
+    </form>
+</div>
