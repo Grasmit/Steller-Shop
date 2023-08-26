@@ -15,6 +15,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { SellerHomeComponent } from './seller-home/seller-home.component';
 import { SellerAddProductComponent } from './seller-add-product/seller-add-product.component';
 import { SellerUpdateProductComponent } from './seller-update-product/seller-update-product.component';
+import {MatCardModule} from '@angular/material/card';
+import { SearchComponent } from './search/search.component';
+import {MatGridListModule} from '@angular/material/grid-list';
+import { ProductDetailsComponent } from './product-details/product-details.component';
+import { UserAuthComponent } from './user-auth/user-auth.component';
+
 
 
 
@@ -26,7 +32,10 @@ import { SellerUpdateProductComponent } from './seller-update-product/seller-upd
     SellerAuthComponent,
     SellerHomeComponent,
     SellerAddProductComponent,
-    SellerUpdateProductComponent
+    SellerUpdateProductComponent,
+    SearchComponent,
+    ProductDetailsComponent,
+    UserAuthComponent
   ],
   imports: [
     BrowserModule,
@@ -35,8 +44,9 @@ import { SellerUpdateProductComponent } from './seller-update-product/seller-upd
     FormsModule,
     MatButtonModule,
     BrowserAnimationsModule,
-    HttpClientModule
-
+    HttpClientModule,
+    MatCardModule,
+    MatGridListModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

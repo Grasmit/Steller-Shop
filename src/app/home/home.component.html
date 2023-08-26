@@ -1,3 +1,59 @@
 <div>
-    home works!
+    <div product-carasoul>
+        <div *ngIf="popularProducts" class="carousel">
+            <ul class="slides">
+                <div *ngFor="let item of popularProducts; let i=index">
+                    <input type="radio" name="radio-buttons" id={{i}} checked />
+                    <li class="slide-container">
+                        <div class="slide-image">
+                            <a routerLink="/details/{{item.id}}">
+                                <img src={{item.image}}>
+                            </a>
+                        </div>
+                        <div class="carousel-controls">
+                            <label for={{i-1}} class="prev-slide">
+                                <span>&lsaquo;</span>
+                            </label>
+                            <label for={{i+1}} class="next-slide">
+                                <span>&rsaquo;</span>
+                            </label>
+                        </div>
+                    </li>
+                    <!-- <label style="display: block; text-align: center;background-color: aliceblue;padding: 1em;">{{item.name}}</label> -->
+                    <!-- <label for={{i}}>{{item.description}}</label> -->
+                </div>
+            </ul>
+        </div>
+    </div>
+    <h1>Trendy Products</h1>
+    <div class="product-list-wrapper">
+        <mat-card *ngFor="let item of trendyProducts" class="example-card">
+            <mat-card-header>
+                <mat-card-title>{{item.name}}</mat-card-title>
+            </mat-card-header>
+            <img mat-card-image src={{item.image}}
+                style="width: 20em;height: 20em;"
+                alt="Photo of a Shiba Inu"
+                >
+            <mat-card-content style="display: flex; flex-direction: column;">
+                <div class="product-price">
+                     <h4> Price: {{item.price}}</h4>
+                </div>
+                <div class="product-color">
+                     <h4> Color: {{item.color}}</h4>
+                </div>
+                <div class="product-category">
+                    
+                    <h4>Category: {{item.category}}</h4>
+                </div>
+            </mat-card-content>
+            <mat-card-actions style="justify-content: space-between;">
+                <a routerLink="/details/{{item.id}}">
+                    <button style="background-color: blueviolet;color: whitesmoke;" mat-button>MORE</button>
+                </a>
+                <button style="background-color: blueviolet;color: whitesmoke;" mat-button>ADD TO CART</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+
 </div>
