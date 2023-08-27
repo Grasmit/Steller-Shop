@@ -39,3 +39,20 @@ body{
     margin:auto;
 }
 
+.invalid-input {
+
+    color: red;
+    margin-top: -20px;
+    font-size: 12px;
+}
+
+button:disabled {
+
+    cursor: not-allowed;
+}
+
+.error-p {
+
+    color: red;
+}
+

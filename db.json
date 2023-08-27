@@ -98,5 +98,18 @@
       "password": "abc@123",
       "id": 4
     }
+  ],
+  "cart": [
+    {
+      "name": "Nike Shoes",
+      "price": "Best shoes for Running",
+      "color": "white",
+      "category": "Shoes",
+      "image": "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/1eeaacc0-e07c-4024-a5f7-57f2fd23e8a2/air-max-270-g-golf-shoe-Z6vCfs.png",
+      "id": 4,
+      "quantity": 1,
+      "userId": 1,
+      "productId": 4
+    }
   ]
 }

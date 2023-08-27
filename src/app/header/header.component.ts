@@ -16,6 +16,7 @@ export class HeaderComponent {
   searchResult!: Product[] | undefined
 
   userName:string = ""
+  cartItems = 0
 
   constructor(private router:Router,private productService:ProductService){}
 
@@ -51,7 +52,17 @@ export class HeaderComponent {
           this.menuType = 'default'
         }
       }
+    })
 
+    let cartData = localStorage.getItem('localCart')
+
+    if(cartData)
+    {
+      this.cartItems = JSON.parse(cartData).length
+    }
+
+    this.productService.cartData.subscribe((result)=>{
+      this.cartItems = result.length
     })
   }
 
@@ -67,6 +78,7 @@ export class HeaderComponent {
     localStorage.removeItem('user')
     this.menuType = 'default'
     this.router.navigate(['/user-auth'])
+    this.productService.cartData.emit([])
   }
 
   searchProduct(query:KeyboardEvent)
