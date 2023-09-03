@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { EventEmitter, Injectable } from '@angular/core';
-import { Product, cart } from 'src/data-types';
+import { Product, cart, order } from 'src/data-types';
 
 @Injectable({
   providedIn: 'root'
@@ -106,5 +106,53 @@ export class ProductService {
         this.cartData.emit(result.body)
       }
     })
+  }
+
+  removeToCart(cartId:number)
+  {
+    return this.http.delete('http://localhost:3000/cart/'+cartId)
+  }
+
+  currentCart()
+  {
+    let userStore = localStorage.getItem('user')
+
+    let userData = userStore && JSON.parse(userStore)
+
+    return this.http.get<cart[]>('http://localhost:3000/cart?userId='+userData.id)
+  }
+
+  orderNow(data:order)
+  {
+    return this.http.post('http://localhost:3000/orders',data)
+  }
+
+  orderList()
+  {
+    let userStore = localStorage.getItem('user')
+
+    let userData = userStore && JSON.parse(userStore)
+
+    return this.http.get<order[]>('http://localhost:3000/orders?userId='+userData.id)
+  }
+
+  deleteCartItems(cartId:number)
+  {
+    let userStore = localStorage.getItem('user')
+
+    let userData = userStore && JSON.parse(userStore)
+
+    return this.http.delete('http://localhost:3000/cart/'+cartId,{observe:'response'}).subscribe((res)=>{
+
+      if(res)
+      {
+        this.cartData.emit([])
+      }
+    })
+  }
+
+  deleteOrder(orderId:string)
+  {
+    return this.http.delete('http://localhost:3000/orders/'+orderId)
   }
 }

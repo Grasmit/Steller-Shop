@@ -20,6 +20,9 @@ import { SearchComponent } from './search/search.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { UserAuthComponent } from './user-auth/user-auth.component';
+import { CartSummaryComponent } from './cart-summary/cart-summary.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { MyOrderComponent } from './my-order/my-order.component';
 
 
 
@@ -35,7 +38,10 @@ import { UserAuthComponent } from './user-auth/user-auth.component';
     SellerUpdateProductComponent,
     SearchComponent,
     ProductDetailsComponent,
-    UserAuthComponent
+    UserAuthComponent,
+    CartSummaryComponent,
+    CheckoutComponent,
+    MyOrderComponent
   ],
   imports: [
     BrowserModule,

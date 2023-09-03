@@ -9,6 +9,9 @@ import { SellerUpdateProductComponent } from './seller-update-product/seller-upd
 import { SearchComponent } from './search/search.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { UserAuthComponent } from './user-auth/user-auth.component';
+import { CartSummaryComponent } from './cart-summary/cart-summary.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { MyOrderComponent } from './my-order/my-order.component';
 
 const routes: Routes = [
 
@@ -47,6 +50,18 @@ const routes: Routes = [
     path:'user-auth',
     component:UserAuthComponent,
   },
+  {
+    path:'cart-page',
+    component:CartSummaryComponent
+  },
+  {
+    path:'checkout',
+    component:CheckoutComponent
+  },
+  {
+    path:'my-orders',
+    component:MyOrderComponent
+  }
 
 ];
 

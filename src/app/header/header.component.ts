@@ -46,6 +46,8 @@ export class HeaderComponent {
           this.userName = userData.userName
 
           this.menuType = 'user'
+
+          this.productService.getCartList(userData.id)
         }
         else
         {
